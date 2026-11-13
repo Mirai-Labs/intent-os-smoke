@@ -1,0 +1,29 @@
+# do not edit — managed by intent-os (intent: cc760661-70af-42e9-b582-7131f60dbfbf, version: v1)
+intent_id: cc760661-70af-42e9-b582-7131f60dbfbf
+version: v1
+policy_fingerprint: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+target_id: d2c102d8-bcd7-42e5-aef2-3ee34382b896
+repo: Mirai-Labs/intent-os-smoke
+provider: github
+base_branch: main
+branch_name: 
+artifacts:
+  - .controlplane/manifest.yaml
+  - .controlplane/context-summary.md
+  - .controlplane/constraints.md
+  - .controlplane/acceptance.md
+  - .controlplane/commands.md
+  - .controlplane/memory.md
+  - AGENTS.md
+  - CLAUDE.md
+  - .cursor/rules/intent-os.mdc
+  - .claude/settings.json
+  - .controlplane/hooks/pretooluse.sh
+  - .controlplane/hooks/posttooluse.sh
+  - .claude/mcp_servers.json
+  - .controlplane/PRD.md
+  - .controlplane/TASK.md
+  - .controlplane/MEMORY.snapshot.md
+  - .controlplane/context-map.json
+  - .controlplane/guardrails.json
+  - .github/copilot-instructions.md
