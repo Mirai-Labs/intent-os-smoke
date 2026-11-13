@@ -21,20 +21,45 @@ func TestHalf(t *testing.T) {
 }
 
 func TestTriple(t *testing.T) {
-	cases := []struct{ a, want int }{{0, 0}, {1, 3}, {-3, -9}, {14, 42}}
-	for _, c := range cases {
-		if got := Triple(c.a); got != c.want {
-			t.Errorf("Triple(%d) = %d, want %d", c.a, got, c.want)
-		}
+	tests := []struct {
+		name string
+		a    int
+		want int
+	}{
+		{"zero", 0, 0},
+		{"one", 1, 3},
+		{"negative", -3, -9},
+		{"large", 14, 42},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Triple(tc.a); got != tc.want {
+				t.Errorf("Triple(%d) = %d, want %d", tc.a, got, tc.want)
+			}
+		})
 	}
 }
 
 func TestThird(t *testing.T) {
-	cases := []struct{ a, want int }{{0, 0}, {9, 3}, {10, 3}, {2, 0}, {-2, 0}, {-10, -3}, {-9, -3}}
-	for _, c := range cases {
-		if got := Third(c.a); got != c.want {
-			t.Errorf("Third(%d) = %d, want %d", c.a, got, c.want)
-		}
+	tests := []struct {
+		name string
+		a    int
+		want int
+	}{
+		{"zero", 0, 0},
+		{"exact", 9, 3},
+		{"truncates positive", 10, 3},
+		{"small positive", 2, 0},
+		{"small negative", -2, 0},
+		{"truncates negative", -10, -3},
+		{"exact negative", -9, -3},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Third(tc.a); got != tc.want {
+				t.Errorf("Third(%d) = %d, want %d", tc.a, got, tc.want)
+			}
+		})
 	}
 }
 
