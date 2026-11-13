@@ -5,6 +5,28 @@ import (
 	"testing"
 )
 
+func TestNegate(t *testing.T) {
+	tests := []struct {
+		name    string
+		a, want int
+	}{
+		{"zero", 0, 0},
+		{"positive", 5, -5},
+		{"negative", -7, 7},
+		{"one", 1, -1},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Negate(tc.a); got != tc.want {
+				t.Errorf("Negate(%d) = %d, want %d", tc.a, got, tc.want)
+			}
+			if got := Negate(Negate(tc.a)); got != tc.a {
+				t.Errorf("Negate(Negate(%d)) = %d, want %d", tc.a, got, tc.a)
+			}
+		})
+	}
+}
+
 func TestDouble(t *testing.T) {
 	cases := []struct{ a, want int }{{0, 0}, {1, 2}, {-3, -6}, {21, 42}}
 	for _, c := range cases {

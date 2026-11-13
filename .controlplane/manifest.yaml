@@ -1,8 +1,8 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
-intent_id: 93ad5f83-66cd-4b2c-8b56-122a45890c58
+# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+intent_id: 0eae61fb-0d99-4634-a0d9-dc92326a7187
 version: v1
 policy_fingerprint: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-target_id: 5d50a69e-e61b-44d1-8eb4-85acdc5fe7b4
+target_id: aa8547b4-dd23-4d2f-ad21-89b027a38230
 repo: Mirai-Labs/intent-os-smoke
 provider: github
 base_branch: main

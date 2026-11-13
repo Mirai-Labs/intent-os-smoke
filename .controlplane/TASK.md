@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
-# Task Checklist — Add Median to the smoke library
+# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+# Task Checklist — Add Negate and a CI workflow to the smoke library
 
 ## Acceptance Criteria Tasks
 
-- [ ] calc.go exports Median(xs []int) float64: the middle value of the sorted values, the mean of the two middle values for an even count, and 0 for an empty slice
-- [ ] Median never modifies or reorders the slice passed by the caller, and calc_test.go proves it with a test that compares the input before and after
-- [ ] calc_test.go has table-driven tests for odd, even, empty and unsorted inputs, and go test ./... passes
+- [ ] calc.go exports Negate(a int) int that returns minus a
+- [ ] Negate(0) returns 0 and Negate(Negate(x)) returns x
+- [ ] calc_test.go has table-driven tests for Negate and go test ./... passes
 
 ## Definition of Done Tasks
 
