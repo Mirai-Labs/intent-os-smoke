@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 3ebdfbba-af20-426e-b0a3-984e8f71abe2, version: v1)
-# Task Checklist — Add Quad and Quarter functions to the smoke library
+# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
+# Task Checklist — Add Median to the smoke library
 
 ## Acceptance Criteria Tasks
 
-- [ ] calc.go exports Quad(a int) int that returns a times 4
-- [ ] calc.go exports Quarter(a int) int that returns a divided by 4, rounding toward zero
-- [ ] calc_test.go has table-driven tests for Quad and Quarter and go test ./... passes
+- [ ] calc.go exports Median(xs []int) float64: the middle value of the sorted values, the mean of the two middle values for an even count, and 0 for an empty slice
+- [ ] Median never modifies or reorders the slice passed by the caller, and calc_test.go proves it with a test that compares the input before and after
+- [ ] calc_test.go has table-driven tests for odd, even, empty and unsorted inputs, and go test ./... passes
 
 ## Definition of Done Tasks
 
