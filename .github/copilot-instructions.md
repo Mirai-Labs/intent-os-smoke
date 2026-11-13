@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: cc760661-70af-42e9-b582-7131f60dbfbf, version: v1)
-# GitHub Copilot Instructions — Add Double and Half functions to the smoke library
+# do not edit — managed by intent-os (intent: 3ebdfbba-af20-426e-b0a3-984e8f71abe2, version: v1)
+# GitHub Copilot Instructions — Add Quad and Quarter functions to the smoke library
 
 > This file is managed by intent-os. Do not edit manually.
 
 ## Intent Summary
 
-Extend package smoke in calc.go with Double(a int) int and Half(a int) int, with table-driven tests in calc_test.go. Do not change Add.
+Extend package smoke in calc.go with Quad(a int) int and Quarter(a int) int, with table-driven tests in calc_test.go. Do not change Add.
 
 ## Control-Plane Artifacts
 
