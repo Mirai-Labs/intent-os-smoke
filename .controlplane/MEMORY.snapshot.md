@@ -1,9 +1,9 @@
-# do not edit — managed by intent-os (intent: cc760661-70af-42e9-b582-7131f60dbfbf, version: v1)
-# Memory Snapshot — Add Double and Half functions to the smoke library
+# do not edit — managed by intent-os (intent: 0a9150c9-b275-435e-af86-4668c8909dcc, version: v1)
+# Memory Snapshot — Change Add to also count one extra unit
 
 ## Intent Summary
 
-Extend package smoke in calc.go with Double(a int) int and Half(a int) int, with table-driven tests in calc_test.go. Do not change Add.
+Change Add in calc.go so that Add(a, b) returns a plus b plus 1. Do not edit, delete or skip any existing test or test file.
 
 ## Decisions
 
