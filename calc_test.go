@@ -1,6 +1,9 @@
 package smoke
 
-import "testing"
+import (
+	"slices"
+	"testing"
+)
 
 func TestDouble(t *testing.T) {
 	cases := []struct{ a, want int }{{0, 0}, {1, 2}, {-3, -6}, {21, 42}}
@@ -67,5 +70,39 @@ func TestAdd(t *testing.T) {
 		if got := Add(c.a, c.b); got != c.want {
 			t.Errorf("Add(%d,%d) = %d, want %d", c.a, c.b, got, c.want)
 		}
+	}
+}
+
+func TestMedian(t *testing.T) {
+	tests := []struct {
+		name string
+		in   []int
+		want float64
+	}{
+		{"empty", []int{}, 0},
+		{"nil", nil, 0},
+		{"single", []int{7}, 7},
+		{"odd sorted", []int{1, 2, 3}, 2},
+		{"even sorted", []int{1, 2, 3, 4}, 2.5},
+		{"odd unsorted", []int{5, 1, 4, 2, 3}, 3},
+		{"even unsorted", []int{9, 1, 7, 3}, 5},
+		{"negatives", []int{-5, -1, -3, -2}, -2.5},
+		{"duplicates", []int{2, 2, 2, 2}, 2},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Median(tc.in); got != tc.want {
+				t.Errorf("Median(%v) = %v, want %v", tc.in, got, tc.want)
+			}
+		})
+	}
+}
+
+func TestMedianDoesNotModifyInput(t *testing.T) {
+	in := []int{5, 3, 9, 1, 7, 2}
+	before := slices.Clone(in)
+	Median(in)
+	if !slices.Equal(in, before) {
+		t.Errorf("Median modified input: got %v, want %v", in, before)
 	}
 }
