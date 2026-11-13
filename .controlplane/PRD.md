@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
+# do not edit — managed by intent-os (intent: edd6c7ad-7b59-46ee-875f-b42dccc61b36, version: v1)
 # Product Requirements Document
 
-**Title:** Add Median to the smoke library
+**Title:** Add a generic Set type to the smoke library
 
 ## Description
 
-Extend package smoke in calc.go with Median(xs []int) float64, with table-driven tests in calc_test.go. Do not change Add.
+Add a new file set.go to package smoke that declares the generic type alias `type Set[T comparable] = map[T]struct{}` (a generic type alias) plus the generic functions NewSet, SetAdd, SetHas and SetLen over it, and set_test.go with table-driven tests. Do not change calc.go or calc_test.go.
 
 ## Functional Requirements
 
@@ -17,9 +17,9 @@ _No non-functional requirements defined._
 
 ## Acceptance Criteria
 
-- calc.go exports Median(xs []int) float64: the middle value of the sorted values, the mean of the two middle values for an even count, and 0 for an empty slice
-- Median never modifies or reorders the slice passed by the caller, and calc_test.go proves it with a test that compares the input before and after
-- calc_test.go has table-driven tests for odd, even, empty and unsorted inputs, and go test ./... passes
+- set.go declares `type Set[T comparable] = map[T]struct{}` as a generic type alias (not a defined type) and NewSet[T comparable](items ...T) Set[T]
+- set.go exports SetAdd, SetHas and SetLen as generic functions over Set[T]
+- set_test.go has table-driven tests for NewSet, SetAdd, SetHas and SetLen with int and string element types, and go test ./... passes
 
 ## Definition of Done
 

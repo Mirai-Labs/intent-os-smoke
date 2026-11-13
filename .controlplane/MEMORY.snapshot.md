@@ -1,9 +1,9 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
-# Memory Snapshot — Add Median to the smoke library
+# do not edit — managed by intent-os (intent: edd6c7ad-7b59-46ee-875f-b42dccc61b36, version: v1)
+# Memory Snapshot — Add a generic Set type to the smoke library
 
 ## Intent Summary
 
-Extend package smoke in calc.go with Median(xs []int) float64, with table-driven tests in calc_test.go. Do not change Add.
+Add a new file set.go to package smoke that declares the generic type alias `type Set[T comparable] = map[T]struct{}` (a generic type alias) plus the generic functions NewSet, SetAdd, SetHas and SetLen over it, and set_test.go with table-driven tests. Do not change calc.go or calc_test.go.
 
 ## Decisions
 
