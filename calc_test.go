@@ -20,6 +20,24 @@ func TestHalf(t *testing.T) {
 	}
 }
 
+func TestQuad(t *testing.T) {
+	cases := []struct{ a, want int }{{0, 0}, {1, 4}, {-3, -12}, {21, 84}}
+	for _, c := range cases {
+		if got := Quad(c.a); got != c.want {
+			t.Errorf("Quad(%d) = %d, want %d", c.a, got, c.want)
+		}
+	}
+}
+
+func TestQuarter(t *testing.T) {
+	cases := []struct{ a, want int }{{0, 0}, {8, 2}, {9, 2}, {3, 0}, {-3, 0}, {-9, -2}, {-8, -2}}
+	for _, c := range cases {
+		if got := Quarter(c.a); got != c.want {
+			t.Errorf("Quarter(%d) = %d, want %d", c.a, got, c.want)
+		}
+	}
+}
+
 func TestAdd(t *testing.T) {
 	cases := []struct{ a, b, want int }{{1, 2, 3}, {0, 0, 0}, {-1, 1, 0}}
 	for _, c := range cases {
