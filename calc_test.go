@@ -10,3 +10,24 @@ func TestAdd(t *testing.T) {
 		}
 	}
 }
+
+var parityCases = []struct {
+	a    int
+	even bool
+}{{0, true}, {1, false}, {2, true}, {-1, false}, {-2, true}, {7, false}, {10, true}}
+
+func TestIsEven(t *testing.T) {
+	for _, c := range parityCases {
+		if got := IsEven(c.a); got != c.even {
+			t.Errorf("IsEven(%d) = %v, want %v", c.a, got, c.even)
+		}
+	}
+}
+
+func TestIsOdd(t *testing.T) {
+	for _, c := range parityCases {
+		if got := IsOdd(c.a); got != !c.even {
+			t.Errorf("IsOdd(%d) = %v, want %v", c.a, got, !c.even)
+		}
+	}
+}
