@@ -21,20 +21,43 @@ func TestHalf(t *testing.T) {
 }
 
 func TestQuad(t *testing.T) {
-	cases := []struct{ a, want int }{{0, 0}, {1, 4}, {-3, -12}, {21, 84}}
-	for _, c := range cases {
-		if got := Quad(c.a); got != c.want {
-			t.Errorf("Quad(%d) = %d, want %d", c.a, got, c.want)
-		}
+	tests := []struct {
+		name    string
+		a, want int
+	}{
+		{"zero", 0, 0},
+		{"one", 1, 4},
+		{"negative", -3, -12},
+		{"large", 21, 84},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Quad(tc.a); got != tc.want {
+				t.Errorf("Quad(%d) = %d, want %d", tc.a, got, tc.want)
+			}
+		})
 	}
 }
 
 func TestQuarter(t *testing.T) {
-	cases := []struct{ a, want int }{{0, 0}, {8, 2}, {9, 2}, {3, 0}, {-3, 0}, {-9, -2}, {-8, -2}}
-	for _, c := range cases {
-		if got := Quarter(c.a); got != c.want {
-			t.Errorf("Quarter(%d) = %d, want %d", c.a, got, c.want)
-		}
+	tests := []struct {
+		name    string
+		a, want int
+	}{
+		{"zero", 0, 0},
+		{"exact", 8, 2},
+		{"positive truncates", 9, 2},
+		{"small positive", 3, 0},
+		{"small negative", -3, 0},
+		{"negative truncates toward zero", -9, -2},
+		{"negative exact", -8, -2},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Quarter(tc.a); got != tc.want {
+				t.Errorf("Quarter(%d) = %d, want %d", tc.a, got, tc.want)
+			}
+		})
 	}
 }
 
