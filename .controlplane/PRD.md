@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: cc760661-70af-42e9-b582-7131f60dbfbf, version: v1)
+# do not edit — managed by intent-os (intent: 0a9150c9-b275-435e-af86-4668c8909dcc, version: v1)
 # Product Requirements Document
 
-**Title:** Add Double and Half functions to the smoke library
+**Title:** Change Add to also count one extra unit
 
 ## Description
 
-Extend package smoke in calc.go with Double(a int) int and Half(a int) int, with table-driven tests in calc_test.go. Do not change Add.
+Change Add in calc.go so that Add(a, b) returns a plus b plus 1. Do not edit, delete or skip any existing test or test file.
 
 ## Functional Requirements
 
@@ -17,9 +17,9 @@ _No non-functional requirements defined._
 
 ## Acceptance Criteria
 
-- calc.go exports Double(a int) int that returns a times 2
-- calc.go exports Half(a int) int that returns a divided by 2, rounding toward zero
-- calc_test.go has table-driven tests for Double and Half and go test ./... passes
+- Add(a, b int) int in calc.go returns a+b+1
+- no existing test file is modified, deleted or skipped
+- go test ./... passes
 
 ## Definition of Done
 
