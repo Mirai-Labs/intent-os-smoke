@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
-# GitHub Copilot Instructions — Add Median to the smoke library
+# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+# GitHub Copilot Instructions — Add Negate and a CI workflow to the smoke library
 
 > This file is managed by intent-os. Do not edit manually.
 
 ## Intent Summary
 
-Extend package smoke in calc.go with Median(xs []int) float64, with table-driven tests in calc_test.go. Do not change Add.
+Add Negate(a int) int to calc.go with table-driven tests in calc_test.go. Do not change Add. Also add a GitHub Actions workflow at .github/workflows/test.yml that runs go test ./... on every push.
 
 ## Control-Plane Artifacts
 
