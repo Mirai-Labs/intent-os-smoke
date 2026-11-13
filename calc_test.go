@@ -20,6 +20,24 @@ func TestHalf(t *testing.T) {
 	}
 }
 
+func TestTriple(t *testing.T) {
+	cases := []struct{ a, want int }{{0, 0}, {1, 3}, {-3, -9}, {14, 42}}
+	for _, c := range cases {
+		if got := Triple(c.a); got != c.want {
+			t.Errorf("Triple(%d) = %d, want %d", c.a, got, c.want)
+		}
+	}
+}
+
+func TestThird(t *testing.T) {
+	cases := []struct{ a, want int }{{0, 0}, {9, 3}, {10, 3}, {2, 0}, {-2, 0}, {-10, -3}, {-9, -3}}
+	for _, c := range cases {
+		if got := Third(c.a); got != c.want {
+			t.Errorf("Third(%d) = %d, want %d", c.a, got, c.want)
+		}
+	}
+}
+
 func TestAdd(t *testing.T) {
 	cases := []struct{ a, b, want int }{{1, 2, 3}, {0, 0, 0}, {-1, 1, 0}}
 	for _, c := range cases {
