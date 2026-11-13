@@ -6,6 +6,9 @@ import "sort"
 // Add returns the sum of a and b.
 func Add(a, b int) int { return a + b }
 
+// Negate returns minus a.
+func Negate(a int) int { return -a }
+
 // Double returns a times 2.
 func Double(a int) int { return a * 2 }
 
