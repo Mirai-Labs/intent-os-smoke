@@ -1,6 +1,6 @@
-# do not edit — managed by intent-os (intent: cc760661-70af-42e9-b582-7131f60dbfbf, version: v1)
+# do not edit — managed by intent-os (intent: 3865c6f8-8222-448b-a84e-d809ad9d9f72, version: v1)
 # Acceptance Criteria
 
-- calc.go exports Double(a int) int that returns a times 2
-- calc.go exports Half(a int) int that returns a divided by 2, rounding toward zero
-- calc_test.go has table-driven tests for Double and Half and go test ./... passes
+- calc.go exports Triple(a int) int that returns a times 3
+- calc.go exports Third(a int) int that returns a divided by 3, rounding toward zero
+- calc_test.go has table-driven tests for Triple and Third and go test ./... passes
