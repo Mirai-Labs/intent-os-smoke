@@ -1,9 +1,9 @@
-# do not edit — managed by intent-os (intent: 3ebdfbba-af20-426e-b0a3-984e8f71abe2, version: v1)
-# Memory Snapshot — Add Quad and Quarter functions to the smoke library
+# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
+# Memory Snapshot — Add Median to the smoke library
 
 ## Intent Summary
 
-Extend package smoke in calc.go with Quad(a int) int and Quarter(a int) int, with table-driven tests in calc_test.go. Do not change Add.
+Extend package smoke in calc.go with Median(xs []int) float64, with table-driven tests in calc_test.go. Do not change Add.
 
 ## Decisions
 
