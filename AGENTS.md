@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
-# AGENTS.md — Add Median to the smoke library
+# do not edit — managed by intent-os (intent: 5f6aa215-1fef-429e-89e7-ac811c84b332, version: v1)
+# AGENTS.md — Add generic slice helpers (second attempt)
 
 > Vendor-neutral agent instructions managed by intent-os.
 
 ## Scope
 
-Extend package smoke in calc.go with Median(xs []int) float64, with table-driven tests in calc_test.go. Do not change Add.
+Add a new file slices.go to package smoke with the generic helpers Map, Filter, Reduce, GroupBy and Zip, and slices_test.go with table-driven tests for each of them. Do not change calc.go or calc_test.go.
 
 ## Artifacts Under Management
 
@@ -43,6 +43,6 @@ Denied tools: `network_egress`
 
 ## Acceptance Criteria
 
-- calc.go exports Median(xs []int) float64: the middle value of the sorted values, the mean of the two middle values for an even count, and 0 for an empty slice
-- Median never modifies or reorders the slice passed by the caller, and calc_test.go proves it with a test that compares the input before and after
-- calc_test.go has table-driven tests for odd, even, empty and unsorted inputs, and go test ./... passes
+- slices.go exports Map[T, R any](xs []T, f func(T) R) []R, Filter[T any](xs []T, pred func(T) bool) []T and Reduce[T, A any](xs []T, init A, f func(A, T) A) A
+- slices.go exports GroupBy[T any, K comparable](xs []T, key func(T) K) map[K][]T that keeps the input order inside each group, and Zip[A, B any](as []A, bs []B) []struct{ First A; Second B } that stops at the shorter slice
+- slices_test.go has table-driven tests for Map, Filter, Reduce, GroupBy and Zip using at least two different type parameters each, and go test ./... passes

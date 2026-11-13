@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 93ad5f83-66cd-4b2c-8b56-122a45890c58, version: v1)
-# GitHub Copilot Instructions — Add Median to the smoke library
+# do not edit — managed by intent-os (intent: 5f6aa215-1fef-429e-89e7-ac811c84b332, version: v1)
+# GitHub Copilot Instructions — Add generic slice helpers (second attempt)
 
 > This file is managed by intent-os. Do not edit manually.
 
 ## Intent Summary
 
-Extend package smoke in calc.go with Median(xs []int) float64, with table-driven tests in calc_test.go. Do not change Add.
+Add a new file slices.go to package smoke with the generic helpers Map, Filter, Reduce, GroupBy and Zip, and slices_test.go with table-driven tests for each of them. Do not change calc.go or calc_test.go.
 
 ## Control-Plane Artifacts
 
