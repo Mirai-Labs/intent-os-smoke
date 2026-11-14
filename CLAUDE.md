@@ -1,4 +1,4 @@
-# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+# do not edit — managed by intent-os (intent: 12a64873-84f3-4161-b24b-eacd2ba87d41, version: v1)
 # CLAUDE.md — Compatibility Pointer
 
 This file is managed by intent-os. Read AGENTS.md for full agent instructions.
