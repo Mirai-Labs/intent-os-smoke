@@ -21,6 +21,17 @@ func Quad(a int) int { return a * 4 }
 // Quarter returns a divided by 4, rounding toward zero.
 func Quarter(a int) int { return a / 4 }
 
+// Clamp returns v limited to the range lo..hi.
+func Clamp(v, lo, hi int) int {
+	if v < lo {
+		return lo
+	}
+	if v > hi {
+		return hi
+	}
+	return v
+}
+
 // Median returns the median of xs: the middle value of the sorted values, or
 // the mean of the two middle values for an even count. It returns 0 for an
 // empty slice. The input slice is not modified.
