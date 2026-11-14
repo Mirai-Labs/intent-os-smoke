@@ -1,11 +1,11 @@
-# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
-# GitHub Copilot Instructions — Add Negate and a CI workflow to the smoke library
+# do not edit — managed by intent-os (intent: 8effa0c8-7ee1-4d3f-a8c7-846298d5ef10, version: v1)
+# GitHub Copilot Instructions — Add Abs to the smoke library
 
 > This file is managed by intent-os. Do not edit manually.
 
 ## Intent Summary
 
-Add Negate(a int) int to calc.go with table-driven tests in calc_test.go. Do not change Add. Also add a GitHub Actions workflow at .github/workflows/test.yml that runs go test ./... on every push.
+Add Abs(a int) int to calc.go returning the absolute value, with table-driven tests in calc_test.go. Do not change existing functions.
 
 ## Control-Plane Artifacts
 

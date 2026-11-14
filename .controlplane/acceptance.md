@@ -1,6 +1,6 @@
-# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+# do not edit — managed by intent-os (intent: 8effa0c8-7ee1-4d3f-a8c7-846298d5ef10, version: v1)
 # Acceptance Criteria
 
-- calc.go exports Negate(a int) int that returns minus a
-- Negate(0) returns 0 and Negate(Negate(x)) returns x
-- calc_test.go has table-driven tests for Negate and go test ./... passes
+- calc.go exports Abs(a int) int that returns the absolute value of a
+- Abs(-3) returns 3 and Abs(3) returns 3 and Abs(0) returns 0
+- calc_test.go has table-driven tests for Abs and go test ./... passes

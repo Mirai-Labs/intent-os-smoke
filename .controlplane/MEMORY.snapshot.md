@@ -1,9 +1,9 @@
-# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
-# Memory Snapshot — Add Negate and a CI workflow to the smoke library
+# do not edit — managed by intent-os (intent: 8effa0c8-7ee1-4d3f-a8c7-846298d5ef10, version: v1)
+# Memory Snapshot — Add Abs to the smoke library
 
 ## Intent Summary
 
-Add Negate(a int) int to calc.go with table-driven tests in calc_test.go. Do not change Add. Also add a GitHub Actions workflow at .github/workflows/test.yml that runs go test ./... on every push.
+Add Abs(a int) int to calc.go returning the absolute value, with table-driven tests in calc_test.go. Do not change existing functions.
 
 ## Decisions
 
