@@ -9,6 +9,14 @@ func Add(a, b int) int { return a + b }
 // Negate returns minus a.
 func Negate(a int) int { return -a }
 
+// Abs returns the absolute value of a.
+func Abs(a int) int {
+	if a < 0 {
+		return -a
+	}
+	return a
+}
+
 // Double returns a times 2.
 func Double(a int) int { return a * 2 }
 

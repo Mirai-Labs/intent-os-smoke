@@ -27,6 +27,26 @@ func TestNegate(t *testing.T) {
 	}
 }
 
+func TestAbs(t *testing.T) {
+	tests := []struct {
+		name    string
+		a, want int
+	}{
+		{"zero", 0, 0},
+		{"positive", 3, 3},
+		{"negative", -3, 3},
+		{"one", 1, 1},
+		{"negative one", -1, 1},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Abs(tc.a); got != tc.want {
+				t.Errorf("Abs(%d) = %d, want %d", tc.a, got, tc.want)
+			}
+		})
+	}
+}
+
 func TestDouble(t *testing.T) {
 	cases := []struct{ a, want int }{{0, 0}, {1, 2}, {-3, -6}, {21, 42}}
 	for _, c := range cases {
