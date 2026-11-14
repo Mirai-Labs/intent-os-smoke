@@ -95,6 +95,27 @@ func TestAdd(t *testing.T) {
 	}
 }
 
+func TestClamp(t *testing.T) {
+	tests := []struct {
+		name            string
+		v, lo, hi, want int
+	}{
+		{"above", 5, 0, 3, 3},
+		{"below", -1, 0, 3, 0},
+		{"inside", 2, 0, 3, 2},
+		{"at lo", 0, 0, 3, 0},
+		{"at hi", 3, 0, 3, 3},
+		{"negative range", -5, -10, -2, -5},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := Clamp(tc.v, tc.lo, tc.hi); got != tc.want {
+				t.Errorf("Clamp(%d,%d,%d) = %d, want %d", tc.v, tc.lo, tc.hi, got, tc.want)
+			}
+		})
+	}
+}
+
 func TestMedian(t *testing.T) {
 	tests := []struct {
 		name string

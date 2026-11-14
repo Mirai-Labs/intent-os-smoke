@@ -1,8 +1,8 @@
-# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+# do not edit — managed by intent-os (intent: b1561fe5-7043-49a1-9316-538520648a4a, version: v1)
 # Context Summary
 
-**Intent:** Add Negate and a CI workflow to the smoke library
+**Intent:** Add Clamp to the smoke library
 
 ## Description
 
-Add Negate(a int) int to calc.go with table-driven tests in calc_test.go. Do not change Add. Also add a GitHub Actions workflow at .github/workflows/test.yml that runs go test ./... on every push.
+Add Clamp(v, lo, hi int) int to calc.go returning v limited to the range lo..hi, with table-driven tests in calc_test.go. Do not change existing functions.
