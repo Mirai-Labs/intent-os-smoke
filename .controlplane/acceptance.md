@@ -1,6 +1,6 @@
-# do not edit — managed by intent-os (intent: 0eae61fb-0d99-4634-a0d9-dc92326a7187, version: v1)
+# do not edit — managed by intent-os (intent: b1561fe5-7043-49a1-9316-538520648a4a, version: v1)
 # Acceptance Criteria
 
-- calc.go exports Negate(a int) int that returns minus a
-- Negate(0) returns 0 and Negate(Negate(x)) returns x
-- calc_test.go has table-driven tests for Negate and go test ./... passes
+- calc.go exports Clamp(v, lo, hi int) int that returns lo when v<lo, hi when v>hi and v otherwise
+- Clamp(5,0,3) returns 3, Clamp(-1,0,3) returns 0 and Clamp(2,0,3) returns 2
+- calc_test.go has table-driven tests for Clamp and go test ./... passes
